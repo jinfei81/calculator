@@ -1,0 +1,19 @@
+# Node.js
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: Build
+  steps:
+  - task: UseNode@1
+    inputs:
+      versionSpec: '14.x'
+      addToPath: true
+  - script: |
+      npm install
+      npm run build
+    displayName: 'Install and build Node.js project'
+
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
