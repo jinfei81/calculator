@@ -12,6 +12,8 @@ jobs:
     displayName: 'Install Node.js dependencies'
   - script: npm run build
     displayName: 'Build Node.js project'
+       npm test
+   displayName: 'npm install, build, and test'
 
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
